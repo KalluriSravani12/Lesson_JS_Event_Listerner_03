@@ -48,6 +48,8 @@ header nav a{
     color: black;
     text-decoration: none;
     font-weight: bold;
+    /*Change cursor*/
+    cursor: pointer;
 
 }
 header nav a:visited{

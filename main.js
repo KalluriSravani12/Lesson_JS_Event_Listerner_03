@@ -1,15 +1,15 @@
 /* Page content*/
 const homePageContent = `
-<h1>Welcome</h1>
-<p id="my_id">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officiis distinctio molestiae praesentium animi eius earum facilis odit. Ratione harum illo et temporibus numquam aut ad velit quas unde alias?</p>
+        <h1>Welcome</h1>
+        <p id="my_id">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officiis distinctio molestiae praesentium animi eius earum facilis odit. Ratione harum illo et temporibus numquam aut ad velit quas unde alias?</p>
         <p class="my_class">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aspernatur consectetur nulla sequi eveniet odit provident inventore ut repellat reiciendis ducimus cupiditate, distinctio aliquam veniam sint molestias quam? Necessitatibus, quidem?</p>
         <p class=" two classes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis exercitationem saepe laudantium accusantium in. Accusantium reprehenderit repellat numquam ipsam! Beatae illum laborum provident. Accusamus architecto placeat error? Accusantium, voluptatem.</p>
 
 `;
 
 const aboutPageContent= `
-<h1> About me</h>
-<p> Here you can write about yourself</p>
+    <h1> About me</h1>
+    <p> Here you can write about yourself</p>
 `;
 
 const hobbiesPageContent= `
@@ -28,7 +28,7 @@ const navLinks = document. querySelectorAll("nav a");
 
 // Add event listerners to all elements in navLinks
 navLinks.forEach(link => {
-link.addEventListener("Click", event=>{
+link.addEventListener("click", event=> {
     event.preventDefault(); // Prevent page reload
     const page= link.dataset.page; //Get the string from each data-page attribute
     setActiveNavLink(link); //Move the "active" class
@@ -69,6 +69,7 @@ function updatePageContent(page) {
             break;
     }
 
-
-
 }
+//Since we have an empty div and need some default content
+// We run this function once without a property to get the default case of the switch
+updatePageContent(); 
